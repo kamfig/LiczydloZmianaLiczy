@@ -50,8 +50,11 @@ public class CalculatorSimple {
      * @param b user input
      * @return result of division of a and b
      */
-    public double division (int a, int b){
+    public double division (int a, int b) throws IllegalArgumentException{
         //todo implement method here
+        if (b==0){
+            throw new IllegalArgumentException("Nie można dzielić przez 0");
+        }
         double c = 0;
         c= (double)a/(double)b;
         return c;
